@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Shop.css";
 import Product from "../Product/Product";
+import Card from "../Card/Card";
 
 const Shop = () => {
   const [Products, setProducts] = useState([]);
@@ -27,11 +28,8 @@ const Shop = () => {
           />
         ))}
       </div>
-      <div className=" bg-[#FF99004D] relative h-full">
-        <div className=" fixed">
-          <h1 className=" text-2xl font-bold m-8">Product summary</h1>
-          <p className=" ml-7 text-xl mt-14">select item :{card.length}</p>
-        </div>
+      <div>
+        <Card card={card}/>
       </div>
     </div>
   );
